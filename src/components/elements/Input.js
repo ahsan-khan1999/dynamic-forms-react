@@ -7,11 +7,11 @@ const Input = ({ field }) => {
     <div>
       <label>{field.field_label}</label>
       <input
-        required
+        required={field?.required}
         id={field.field_id}
         value={field.field_value}
         placeholder={field.field_placeholder}
-        onChange={e => handleChange(field.field_id,e)}
+        onChange={(e) => handleChange(field.field_id, e)}
       />
     </div>
   );
